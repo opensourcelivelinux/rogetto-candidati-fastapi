@@ -1,0 +1,14 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Docker data
+postgres_data/
+
+# Environment variables
+.env
+
+# Node (Frontend)
+frontend/node_modules/
+frontend/dist/

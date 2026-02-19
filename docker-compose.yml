@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db-candidatura:
+    image: postgres:16
+    container_name: postgres-candidatura
+    restart: always
+    environment:
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: latuapassword
+      POSTGRES_DB: project_kill_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
