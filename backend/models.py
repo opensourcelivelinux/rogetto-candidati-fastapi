@@ -15,3 +15,15 @@ class Project(Base):
     description = Column(Text)
     owner_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("User", back_populates="projects")
+
+    # ... mantieni le classi User e Project che hai già ...
+
+class Candidate(Base):
+    __tablename__ = "candidates"
+    id = Column(Integer, primary_key=True, index=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    email = Column(String, unique=True, index=True)
+    role = Column(String)
+    experience_years = Column(Integer)
+
